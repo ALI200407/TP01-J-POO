@@ -1,37 +1,5 @@
 import java.util.Scanner;
 
-// الصنف Point: يمثل نقطة في المستوى (فيه x و y)
-class Point {
-
-    // إحداثيات النقطة
-    double x;
-    double y;
-
-    // المُنشئ: يعطي القيم الأولى للنقطة عند إنشائها (التهيئة)
-    Point(double x, double y) {
-        this.x = x;   // this.x = خاصية الكائن، x = القيمة المرسلة
-        this.y = y;
-    }
-
-    // دالة الإزاحة: تحرّك النقطة بـ dx على المحور x و dy على المحور y
-    void deplacer(double dx, double dy) {
-        x = x + dx;
-        y = y + dy;
-    }
-
-    // دالة المسافة: تحسب المسافة بين هذه النقطة ونقطة أخرى
-    // القانون: racine((x2-x1)² + (y2-y1)²)
-    double distance(Point autre) {
-        double difX = autre.x - x;
-        double difY = autre.y - y;
-        return Math.sqrt(difX * difX + difY * difY);
-    }
-
-    // دالة العرض: تكتب النقطة على الشاشة
-    void afficher() {
-        System.out.println("(" + x + ", " + y + ")");
-    }
-}
 
 // الصنف الرئيسي: منه يبدأ البرنامج
 public class TP01poo {
@@ -73,3 +41,36 @@ public class TP01poo {
         sc.close();
     }
 }
+// الصنف Point: يمثل نقطة في المستوى (فيه x و y)
+class Point {
+
+    // إحداثيات النقطة
+    double x;
+    double y;
+
+    // المُنشئ: يعطي القيم الأولى للنقطة عند إنشائها (التهيئة)
+    Point(double x, double y) {
+        this.x = x;   // this.x = خاصية الكائن، x = القيمة المرسلة
+        this.y = y;
+    }
+
+    // دالة الإزاحة: تحرّك النقطة بـ dx على المحور x و dy على المحور y
+    void deplacer(double dx, double dy) {
+        x = x + dx;
+        y = y + dy;
+    }
+
+    // دالة المسافة: تحسب المسافة بين هذه النقطة ونقطة أخرى
+    // القانون: racine((x2-x1)² + (y2-y1)²)
+    double distance(Point autre) {
+        double difX = autre.x - x;
+        double difY = autre.y - y;
+        return Math.sqrt(difX * difX + difY * difY);
+    }
+
+    // دالة العرض: تكتب النقطة على الشاشة
+    void afficher() {
+        System.out.println("(" + x + ", " + y + ")");
+    }
+}
+
